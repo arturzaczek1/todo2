@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import TaskList from './components/TaskList';
+import NewTaskForm from './components/NewTaskForm';
 
 class App extends Component {
 
@@ -80,6 +81,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <NewTaskForm></NewTaskForm>
         <TaskList tasksProps={this.state.tasks} deleteProps={this.deleteTask}
           moveProps={this.moveToDoneTask} changeProps={this.changeTask} ></TaskList>
       </div>
